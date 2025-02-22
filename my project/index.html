@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Goto Pares Atbp.</title>
-    <script defer src="menu.js" type="module"></script>
-    <script defer src="cart.js" type="module"></script>
-    <script defer src="order.js" type="module"></script>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
@@ -12,7 +12,7 @@
             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnrE1XYGn0RZDroSo5HhkabYRnr7fRWgEprQ&s" alt="Logo">
         </a>
         <h3>Goto Pares Atbp.</h3> 
-        <a href="lock.html">Lock</a>  
+        <a href="lock.html">Lock</a>
     </header>
 
     <section id="menu-options">
@@ -22,29 +22,60 @@
         <button onclick="location.href='#extras'">Extras</button>
         <button onclick="location.href='#beverages'">Beverages</button>
     </section>
-    
-    <div id="menu-container"></div>
-    
 
-    <<h2>Order Summary</h2>
+    <section id="menu-container">
+        <h2>Loading Menu...</h2>
+    </section>
+
+    <h2>Order Summary</h2>
     <table border="1">
         <thead>
             <tr>
                 <th>Item</th>
                 <th>Quantity</th>
                 <th>Price</th>
-                <th>Action</th>
             </tr>
         </thead>
-        <tbody id="cart-items"></tbody>
-        <tfoot>
+        <tbody id="cart-items">
             <tr>
                 <td colspan="2"><strong>Total</strong></td>
-                <td><strong id="total-price">₱0.00</strong></td>
-                <td></td>
+                <td id="total-price"><strong>₱0.00</strong></td>
             </tr>
-        </tfoot>
+        </tbody>
     </table>
-    
+
+    <h3>Customer Details</h3>
+    <form>
+        <label for="first-name">First Name:</label>
+        <input type="text" id="first-name" required>
+        <br>
+
+        <label for="last-name">Last Name:</label>
+        <input type="text" id="last-name" required>
+        <br>
+
+        <label for="address">Address:</label>
+        <input type="text" id="address">
+        <br>
+
+        <h4>Payment Method:</h4>
+        <input type="radio" id="cash" name="payment-method" value="cash" required>
+        <label for="cash">Cash</label><br>
+
+        <input type="radio" id="gcash" name="payment-method" value="gcash">
+        <label for="gcash">GCash</label><br>
+
+        <h4>Order Method:</h4>
+        <input type="radio" id="pickup" name="order-method" value="pickup" required>
+        <label for="pickup">Pick-up</label><br>
+
+        <input type="radio" id="delivery" name="order-method" value="delivery">
+        <label for="delivery">Delivery</label><br>
+
+        <button type="submit">Place Order</button>
+    </form>
+
+    <script type="module" src="menu.js"></script>
+    <script type="module" src="cart.js"></script>
 </body>
 </html>
