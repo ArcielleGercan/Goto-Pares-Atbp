@@ -1,3 +1,5 @@
+import { supabase } from "./supabaseClient.js";
+
 let cart = [];
 
 export function addToCart(id, name, price) {
