@@ -57,11 +57,11 @@ body {
 }
 
 .menu-section {
-    width: 70%;
+    width: 73%;
 }
 
 .order-summary-section {
-    width: 28%;
+    width: 25%;
     background: #f9f9f9;
     padding: 10px;
     border-radius: 20px;
@@ -70,6 +70,6 @@ body {
     position: fixed;
     right: 20px;
     top: 80px;
-    max-height: calc(100vh - 160px);
+    max-height: 90VH;
     overflow-y: auto;
 }
