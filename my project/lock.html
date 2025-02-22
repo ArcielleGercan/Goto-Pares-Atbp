@@ -1,12 +1,50 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Lock</title>
-    <link rel="stylesheet" href="lockstyle.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Goto Pares Atbp. - Lock</title>
+    <link rel="stylesheet" href="lock-style.css">
 </head>
 <body>
-    <div class="lock-form">
-    <a href="index.html" class="btn"> Unlock </a>
+    <header class="header">
+        <a href="index.html" class="logo-link">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnrE1XYGn0RZDroSo5HhkabYRnr7fRWgEprQ&s" alt="Logo" class="logo">
+        </a>
+        <h3 class="site-title">Goto Pares Atbp.</h3> 
+    </header>
+
+    <div class="lock-container">
+        <h2>Locked Page</h2>
+        <div class="datetime">
+            <p id="current-date"></p>
+            <p id="current-time"></p>
+        </div>
+        <form class="lock-form">
+            <button type="submit" class="submit-btn">Unlock</button>
+        </form>
     </div>
+
+    <footer class="footer">
+        <p>Follow us on:</p>
+        <a href="https://www.facebook.com" target="_blank" class="social-link">Facebook</a>
+    </footer>
+
+    <script>
+        function updateDateTime() {
+            const dateElement = document.getElementById('current-date');
+            const timeElement = document.getElementById('current-time');
+            const now = new Date();
+            
+            const optionsDate = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+            const optionsTime = { hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: true };
+            
+            dateElement.textContent = now.toLocaleDateString('en-US', optionsDate);
+            timeElement.textContent = now.toLocaleTimeString('en-US', optionsTime);
+        }
+        
+        setInterval(updateDateTime, 1000);
+        updateDateTime();
+    </script>
 </body>
 </html>
