@@ -1,50 +1,60 @@
 import { supabase } from "./supabaseClient.js";
 import { addToCart } from "./cart.js";
 
-async function fetchMenu() {
-    const { data, error } = await supabase.from("menu").select("*");
+export async function fetchMenu() {
+    try {
+        const { data, error } = await supabase.from("menu").select("*");
 
-    if (error) {
-        console.error("Error fetching menu:", error);
-        return;
-    }
-    console.log("Fetched menu:", data);
+        if (error) throw error;
 
-    const menuContainer = document.getElementById("menu-container");
-    menuContainer.innerHTML = "";
+        console.log("Fetched menu:", data);
 
-    const categories = {};
-    for (const item of data) {
-        if (!categories[item.category_id]) {
-            categories[item.category_id] = [];
+        const menuContainer = document.getElementById("menu-container");
+        menuContainer.innerHTML = "";
+
+        const categories = {};
+
+        for (const item of data) {
+            if (!categories[item.category_id]) {
+                categories[item.category_id] = [];
+            }
+            categories[item.category_id].push(item);
         }
-        categories[item.category_id].push(item);
-    }
 
-    for (const categoryId in categories) {
-        const { data: categoryData } = await supabase
-            .from("categories")
-            .select("category_name")
-            .eq("category_id", categoryId)
-            .single();
+        for (const categoryId in categories) {
+            const { data: categoryData, error: categoryError } = await supabase
+                .from("categories")
+                .select("category_name")
+                .eq("category_id", categoryId)
+                .single();
 
-        const categorySection = document.createElement("div");
-        categorySection.innerHTML = `<h3>${categoryData?.category_name || "Category"}</h3>`;
+            if (categoryError) {
+                console.warn(`Error fetching category for ID ${categoryId}:`, categoryError);
+            }
 
-        categories[categoryId].forEach(item => {
-            categorySection.innerHTML += `
-                <div class="menu-item">
-                    <img src="${item.menu_image}" alt="${item.menu_name}" width="100">
-                    <h4>${item.menu_name}</h4>
-                    <p>${item.menu_description}</p>
-                    <p><strong>₱${item.menu_price}</strong></p>
-                    <button onclick="addToCart(${item.menu_id}, '${item.menu_name}', ${item.menu_price})">Add to Cart</button>
-                </div>
-            `;
-        });
+            const categorySection = document.createElement("div");
+            categorySection.innerHTML = `<h3>${categoryData?.category_name || "Category"}</h3>`;
 
-        menuContainer.appendChild(categorySection);
+            categories[categoryId].forEach(item => {
+                categorySection.innerHTML += `
+                    <div class="menu-item">
+                        <img src="${item.menu_image}" alt="${item.menu_name}" width="100">
+                        <h4>${item.menu_name}</h4>
+                        <p>${item.menu_description}</p>
+                        <p><strong>₱${item.menu_price}</strong></p>
+                        <button onclick="addToCart(${item.menu_id}, '${item.menu_name}', ${item.menu_price})">Add to Cart</button>
+                    </div>
+                `;
+            });
+
+            menuContainer.appendChild(categorySection);
+        }
+    } catch (err) {
+        console.error("Error fetching menu:", err);
     }
 }
+
+// Make fetchMenu accessible from console for debugging
+window.fetchMenu = fetchMenu;
 
 document.addEventListener("DOMContentLoaded", fetchMenu);
