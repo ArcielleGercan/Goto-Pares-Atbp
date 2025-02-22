@@ -17,7 +17,7 @@ async function placeOrder() {
 
     // Insert customer
     let { data: customer, error: customerError } = await supabase
-        .from("CUSTOMERS")
+        .from("customers")
         .insert([{ customer_fname: firstName, customer_lname: lastName, customer_address: address }])
         .select("customer_id")
         .single();
@@ -31,7 +31,7 @@ async function placeOrder() {
 
     // Insert order
     let { data: order, error: orderError } = await supabase
-        .from("ORDERS")
+        .from("orders")
         .insert([{ customer_id: customerId, order_method_id: orderMethod, total_price: totalPrice, payment_method_id: paymentMethod, order_date: new Date() }])
         .select("order_id")
         .single();
@@ -46,7 +46,7 @@ async function placeOrder() {
     // Insert order items
     for (let item of cart) {
         await supabase
-            .from("ORDER_ITEMS")
+            .from("order_items")
             .insert([{ order_id: orderId, menu_id: item.menu_id, quantity: item.quantity, subtotal: item.menu_price * item.quantity }]);
     }
 

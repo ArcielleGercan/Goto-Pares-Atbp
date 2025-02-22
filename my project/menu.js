@@ -22,7 +22,7 @@ async function fetchMenu() {
 
     for (const categoryId in categories) {
         const { data: categoryData } = await supabase
-            .from("CATEGORIES")
+            .from("categories")
             .select("category_name")
             .eq("category_id", categoryId)
             .single();
