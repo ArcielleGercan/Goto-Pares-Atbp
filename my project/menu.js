@@ -2,7 +2,7 @@ import { supabase } from "./supabaseClient.js";
 import { addToCart } from "./cart.js";
 
 async function fetchMenu() {
-    const { data, error } = await supabase.from("MENU").select("*");
+    const { data, error } = await supabase.from("menu").select("*");
 
     if (error) {
         console.error("Error fetching menu:", error);
