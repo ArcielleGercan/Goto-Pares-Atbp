@@ -52,9 +52,9 @@ export async function placeOrder(event) {
     // Get form values
     const firstName = document.getElementById("first-name").value;
     const lastName = document.getElementById("last-name").value;
-    const contact = document.getElementById("contact").value;  // ✅ Added this
-    const email = document.getElementById("email").value;      // ✅ Added this
-    const address = document.getElementById("address").value || null;
+    const contact = document.getElementById("contact").value;
+    const email = document.getElementById("email").value;      
+    const address = document.getElementById("address").value;
     const paymentMethod = document.querySelector('input[name="payment-method"]:checked')?.value;
     const orderMethod = document.querySelector('input[name="order-method"]:checked')?.value;
 
@@ -70,8 +70,8 @@ export async function placeOrder(event) {
             .insert([{ 
                 customer_fname: firstName,
                 customer_lname: lastName,
-                customer_contact: contact,  // ✅ Fixed undefined variable
-                customer_email: email,      // ✅ Fixed undefined variable
+                customer_contact: contact,  
+                customer_email: email,      
                 customer_address: address
             }])
             .select("customer_id")

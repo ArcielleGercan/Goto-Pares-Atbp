@@ -4,7 +4,7 @@ import { cart, updateCart } from "./cart.js";
 async function placeOrder() {
     let firstName = document.getElementById("first-name").value;
     let lastName = document.getElementById("last-name").value;
-    let address = document.getElementById("address").value || null;
+    let address = document.getElementById("address").value;
     let paymentMethod = document.querySelector('input[name="payment-method"]:checked').value;
     let orderMethod = document.querySelector('input[name="order-method"]:checked').value;
 
