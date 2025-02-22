@@ -8,6 +8,7 @@ async function fetchMenu() {
         console.error("Error fetching menu:", error);
         return;
     }
+    console.log("Fetched menu:", data);
 
     const menuContainer = document.getElementById("menu-container");
     menuContainer.innerHTML = "";
