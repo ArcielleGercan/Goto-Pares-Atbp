@@ -65,4 +65,9 @@ body {
     background: #f9f9f9;
     padding: 10px;
     border-radius: 5px;
+    position: fixed;
+    right: 20px;
+    top: 80px;
+    max-height: 80vh;
+    overflow-y: auto;
 }
