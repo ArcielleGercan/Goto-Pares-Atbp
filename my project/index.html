@@ -72,16 +72,22 @@
         <select id="payment-method">
             <option value="cash">Cash on Delivery</option>
             <option value="gcash">GCash</option>
-            <option value="card">Credit/Debit Card</option>
         </select>
         <br>
 
-        <label for="order-method">Order Method:</label>
-        <select id="order-method">
-            <option value="pickup">Pick-up</option>
-            <option value="delivery">Delivery</option>
-        </select>
-        <br>
+        <h4>Payment Method:</h4>
+        <input type="radio" id="cash" name="payment-method" value="cash" required>
+        <label for="cash">Cash on Delivery</label><br>
+
+        <input type="radio" id="gcash" name="payment-method" value="gcash">
+        <label for="gcash">GCash</label><br>
+
+        <h4>Order Method:</h4>
+        <input type="radio" id="pickup" name="order-method" value="pickup" required>
+        <label for="pickup">Pick-up</label><br>
+
+        <input type="radio" id="delivery" name="order-method" value="delivery">
+        <label for="delivery">Delivery</label><br>
 
         <button type="submit">Place Order</button>
     </form>
