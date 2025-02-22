@@ -77,3 +77,24 @@ body {
 .order-summary{
     justify-content: center;
 }
+
+.submit-button {
+    background-color: #F1B60F;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s;
+}
+
+.submit-button:hover {
+    background-color: #d99e0c;
+    transform: scale(1.05);
+}
+
+.submit-button:active {
+    transform: scale(0.95);
+}
