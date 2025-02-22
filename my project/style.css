@@ -73,3 +73,7 @@ body {
     max-height: 90VH;
     overflow-y: auto;
 }
+
+.order-summary{
+    justify-content: center;
+}
