@@ -16,29 +16,36 @@ body {
 }
 
 .header {
-    background-color: #ffd814e5;
+    background-color: #F1B60F;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 10px 20px;
     position: fixed;
     top: 0;
-    left: 0;
+    right: 2px;
     width: 100%;
     z-index: 1000;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
+
 .logo {
     height: 40px;
     border-radius: 20rem;
 }
+
 .site-title {
     margin: 0;
     font-size: 1.5rem;
     text-align: center;
 }
+
 .lock-link {
     text-decoration: none;
     font-weight: bold;
     color: black;
 }
+.section-title{
+    padding-top:5rem;
+}
+
