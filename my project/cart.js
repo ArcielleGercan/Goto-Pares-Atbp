@@ -52,11 +52,13 @@ export async function placeOrder(event) {
     // Get form values
     const firstName = document.getElementById("first-name").value;
     const lastName = document.getElementById("last-name").value;
+    const contact = document.getElementById("contact").value;  // ✅ Added this
+    const email = document.getElementById("email").value;      // ✅ Added this
     const address = document.getElementById("address").value || null;
     const paymentMethod = document.querySelector('input[name="payment-method"]:checked')?.value;
     const orderMethod = document.querySelector('input[name="order-method"]:checked')?.value;
 
-    if (!firstName || !lastName || !paymentMethod || !orderMethod) {
+    if (!firstName || !lastName || !contact || !email || !paymentMethod || !orderMethod) {
         alert("Please fill in all required fields.");
         return;
     }
@@ -68,9 +70,9 @@ export async function placeOrder(event) {
             .insert([{ 
                 customer_fname: firstName,
                 customer_lname: lastName,
-                customer_contact: "", // If you have a contact field, add it
-                customer_email: "", // If you collect email, add it
-                customer_address: address 
+                customer_contact: contact,  // ✅ Fixed undefined variable
+                customer_email: email,      // ✅ Fixed undefined variable
+                customer_address: address
             }])
             .select("customer_id")
             .single();
