@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Goto Pares Atbp.</title>
+    <script defer src="menu.js" type="module"></script>
+    <script defer src="cart.js" type="module"></script>
+    <script defer src="order.js" type="module"></script>
 </head>
-
 <body>
     <header>
         <a href="index.html">
@@ -17,32 +17,14 @@
 
     <section id="menu-options">
         <h2>Menu Options</h2>
-        <button onclick="location.href='#a-la-carte'">A La Carte</button>
-        <button onclick="location.href='#silog-meals'">Silog Meals</button>
-        <button onclick="location.href='#extras'">Extras</button>
-        <button onclick="location.href='#beverages'">Beverages</button>
     </section>
 
-    <h3 id="a-la-carte">A La Carte</h3>
-
-    <h3 id="silog-meals">Silog Meals</h3>
-
-    <h3 id="extras">Extras</h3>
-
-    <h3 id="beverages">Beverages</h3>
-
     <h2>Order Summary</h2>
-    
-    <table border="1">
+    <table id="cart-table" border="1">
         <tr>
             <th>Item</th>
             <th>Quantity</th>
             <th>Price</th>
-        </tr>
-
-        <tr>
-            <td colspan="2"><strong>Total</strong></td>
-            <td><strong>₱0.00</strong></td>
         </tr>
     </table>
 
@@ -57,24 +39,24 @@
         <br>
 
         <label for="address">Address:</label>
-        <input type="text" id="address" required>
+        <input type="text" id="address">
         <br>
 
         <h4>Payment Method:</h4>
-        <input type="radio" id="cash" name="payment-method" value="cash" required>
+        <input type="radio" id="cash" name="payment-method" value="2" required>
         <label for="cash">Cash</label><br>
 
-        <input type="radio" id="gcash" name="payment-method" value="gcash">
+        <input type="radio" id="gcash" name="payment-method" value="1">
         <label for="gcash">GCash</label><br>
 
         <h4>Order Method:</h4>
-        <input type="radio" id="pickup" name="order-method" value="pickup" required>
+        <input type="radio" id="pickup" name="order-method" value="2" required>
         <label for="pickup">Pick-up</label><br>
 
-        <input type="radio" id="delivery" name="order-method" value="delivery">
+        <input type="radio" id="delivery" name="order-method" value="1">
         <label for="delivery">Delivery</label><br>
 
-        <button type="submit">Place Order</button>
+        <button type="button" id="place-order-btn">Place Order</button>
     </form>
 </body>
 </html>
