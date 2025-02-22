@@ -14,3 +14,29 @@ body {
     max-width: 100px;
     height: auto;
 }
+
+.header {
+    background-color: #FFD300;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+.logo {
+    height: 40px;
+}
+.site-title {
+    margin: 0;
+    font-size: 1.5rem;
+}
+.lock-link {
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+}
