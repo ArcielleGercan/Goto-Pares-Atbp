@@ -1,44 +1,49 @@
 let cart = [];
 
-export function addToCart(menu_id, menu_name, menu_price) {
-    let item = cart.find(i => i.menu_id === menu_id);
+function addToCart(menuId, name, price) {
+    let item = cart.find(item => item.menuId === menuId);
+
     if (item) {
-        item.quantity += 1;
+        item.quantity++;
     } else {
-        cart.push({ menu_id, menu_name, menu_price, quantity: 1 });
+        cart.push({ menuId, name, price, quantity: 1 });
     }
+
     updateCart();
 }
 
 function updateCart() {
-    let cartTable = document.getElementById("cart-table");
-    cartTable.innerHTML = `
-        <tr>
-            <th>Item</th>
-            <th>Quantity</th>
-            <th>Price</th>
-        </tr>
-    `;
+    const cartTable = document.getElementById('cart-items');
+    cartTable.innerHTML = '';
 
     let total = 0;
-    cart.forEach((item) => {
-        let subtotal = item.menu_price * item.quantity;
+    
+    cart.forEach(item => {
+        let subtotal = item.price * item.quantity;
         total += subtotal;
+
         cartTable.innerHTML += `
             <tr>
-                <td>${item.menu_name}</td>
-                <td>${item.quantity}</td>
+                <td>${item.name}</td>
+                <td><input type="number" min="1" value="${item.quantity}" onchange="changeQuantity(${item.menuId}, this.value)"></td>
                 <td>₱${subtotal.toFixed(2)}</td>
+                <td><button onclick="removeFromCart(${item.menuId})">Remove</button></td>
             </tr>
         `;
     });
 
-    cartTable.innerHTML += `
-        <tr>
-            <td colspan="2"><strong>Total</strong></td>
-            <td><strong>₱${total.toFixed(2)}</strong></td>
-        </tr>
-    `;
+    document.getElementById('total-price').textContent = `₱${total.toFixed(2)}`;
 }
 
-export { cart, updateCart };
+function changeQuantity(menuId, newQuantity) {
+    let item = cart.find(item => item.menuId === menuId);
+    if (item) {
+        item.quantity = parseInt(newQuantity);
+    }
+    updateCart();
+}
+
+function removeFromCart(menuId) {
+    cart = cart.filter(item => item.menuId !== menuId);
+    updateCart();
+}
