@@ -70,4 +70,6 @@ body {
     position: fixed;
     right: 20px;
     top: 80px;
+    max-height: calc(100vh - 160px);
+    overflow-y: auto;
 }
