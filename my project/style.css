@@ -116,17 +116,13 @@ body {
 .name-group {
     display: flex;
     align-items: center; /* Align items vertically */
-    gap: 3px; /* Space between elements */
+    gap: 10px; /* Space between elements */
     width: 100%;
-}
-
-.name-group label {
-    white-space: nowrap; /* Prevent labels from wrapping */
 }
 
 .name-group input {
     flex: 1; /* Make input fields take equal space */
-    min-width: 100px; /* Prevent the boxes from getting too small */
+    min-width: 150px;
 }
 
 .input-field {
