@@ -44,7 +44,7 @@ export async function fetchMenu() {
                     <h4>${item.menu_name}</h4>
                     <p>${item.menu_description}</p>
                     <p><strong>₱${item.menu_price}</strong></p>
-                    <button type="button" class="submit-button add-to-cart" data-id="${item.menu_id}" data-name="${item.menu_name}" data-price="${item.menu_price}">Submit</button>
+                    <button type="button" class="submit-button add-to-cart" data-id="${item.menu_id}" data-name="${item.menu_name}" data-price="${item.menu_price}">Add to Cart</button>
                 `;
                 categorySection.appendChild(menuItem);
             });
