@@ -98,3 +98,15 @@ body {
 .submit-button:active {
     transform: scale(0.95);
 }
+
+.menu-container h3 {
+    font-size: 24px; /* Increase the font size */
+    font-weight: bold; /* Make it bold */
+    text-transform: uppercase; /* Convert to uppercase for emphasis */
+    margin-top: 50px;
+    margin-bottom: 40px;
+    color: #d3512b; /* Match the button color */
+    border-bottom: 2px solid #d3512b; /* Add an underline effect */
+    padding-bottom: 5px;
+    text-align: left;
+}
