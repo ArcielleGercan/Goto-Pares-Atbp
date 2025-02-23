@@ -7,7 +7,7 @@ body {
     border: 5px solid #F1B60F;
     border-radius:1rem;
     padding: 10px;
-    margin: 8px;
+    margin: 15px;
     grid-auto-rows: repeat (3,1fr);
     display: inline-block;
     width: 260px;
@@ -78,11 +78,11 @@ body {
 
 .order-summary{
     width: 100%;
+    border: 2px solid black;
     border-collapse: collapse;
     justify-content: center;
     border-radius: 8px;
     overflow: hidden;
-    border-color: 1px solid black;
 }
 
 .order-summary th, 
@@ -135,6 +135,21 @@ body {
     margin: 8px 0;
     border: 1px solid #ccc;
     border-radius: 5px;
+}
+
+.method-group {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px; /* Space between both sections */
+}
+
+.payment-method, .order-method {
+    flex: 1; /* Make them take equal space */
+}
+
+.payment-method h4, .order-method h4 {
+    margin-bottom: 5px;
+    text-align: center;
 }
 
 .submit-button {
