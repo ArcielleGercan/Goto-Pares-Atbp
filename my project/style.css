@@ -141,6 +141,7 @@ body {
     display: flex;
     justify-content: space-between;
     gap: 20px; /* Space between both sections */
+    padding-bottom: 24px;
 }
 
 .payment-method, .order-method {
@@ -181,4 +182,28 @@ body {
     border-bottom: 2px solid #d3512b; /* Add an underline effect */
     padding-bottom: 5px;
     text-align: left;
+}
+.radio-group {
+    display: flex;
+    gap: 20px; /* Space between options */
+}
+
+.radio-btn {
+    width: 18px; /* Make the radio button larger */
+    height: 18px;
+    accent-color: black; /* Change color when selected */
+    cursor: pointer; /* Make it more clickable */
+}
+
+.radio-group label {
+    font-size: 16px; /* Increase text size */
+    font-weight: bold;
+    color: #333; /* Darker text for better visibility */
+    cursor: pointer;
+    transition: color 0.3s ease-in-out;
+}
+
+/* Change text color to black when selected */
+.radio-btn:checked + label {
+    color: black;
 }
