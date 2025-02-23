@@ -62,14 +62,13 @@ body {
 
 .order-summary-section {
     width: 25%;
-    background: #f9f9f9;
+    background: #ddd;
     padding: 10px;
+    padding-top: 1px;
     border-radius: 20px;
     position: fixed;
     right: 20px;
-    top: 80px;
-    max-height: 90VH;
-    overflow-y: auto;
+    top: 75px;
 }
 
 .order-summary{
