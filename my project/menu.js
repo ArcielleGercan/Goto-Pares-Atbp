@@ -1,4 +1,3 @@
-// menu.js
 import { supabase } from "./supabaseClient.js";
 import { addToCart, updateCart } from "./cart.js";
 
@@ -45,7 +44,7 @@ export async function fetchMenu() {
                     <h4>${item.menu_name}</h4>
                     <p>${item.menu_description}</p>
                     <p><strong>₱${item.menu_price}</strong></p>
-                    <button class="add-to-cart" data-id="${item.menu_id}" data-name="${item.menu_name}" data-price="${item.menu_price}">Add to Cart</button>
+                    <button type="submit" class="submit-button" data-id="${item.menu_id}" data-name="${item.menu_name}" data-price="${item.menu_price}">Submit</button>
                 `;
                 categorySection.appendChild(menuItem);
             });
@@ -53,9 +52,10 @@ export async function fetchMenu() {
             menuContainer.appendChild(categorySection);
         }
 
-        // Add event listeners to Add to Cart buttons
-        document.querySelectorAll(".add-to-cart").forEach(button => {
+        // Add event listeners to Submit buttons
+        document.querySelectorAll(".submit-button").forEach(button => {
             button.addEventListener("click", (event) => {
+                event.preventDefault(); // Prevent default form behavior
                 const id = event.target.dataset.id;
                 const name = event.target.dataset.name;
                 const price = parseFloat(event.target.dataset.price);

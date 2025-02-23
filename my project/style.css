@@ -4,18 +4,20 @@ body {
 }
 
 .menu-item {
-    border: 1px solid #ddd;
+    border: 5px solid #F1B60F;
+    border-radius:1rem;
     padding: 10px;
     margin: 8px;
     grid-auto-rows: repeat (3,1fr);
     display: inline-block;
-    width: 200px;
-    height: 300px;
+    width: 260px;
+    height: 400px;
 }
 
 .menu-item img {
-    max-width: auto;
-    height: 80px;
+    width: 250px;
+    height: 200px;
+    border-radius:1rem;
 }
 
 .header {
