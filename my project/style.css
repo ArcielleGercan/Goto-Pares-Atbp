@@ -61,7 +61,7 @@ body {
 }
 
 .menu-section {
-    width: 73%;
+    width: 68%;
 }
 
 .order-summary-section {
@@ -82,6 +82,7 @@ body {
     justify-content: center;
     border-radius: 8px;
     overflow: hidden;
+    border-color: 1px solid black;
 }
 
 .order-summary th, 
@@ -112,22 +113,20 @@ body {
     margin-top: 20px;
 }
 
-.customer-form {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    max-width: 400px;
-}
-
 .name-group {
     display: flex;
-    gap: 10px;
+    align-items: center; /* Align items vertically */
+    gap: 3px; /* Space between elements */
     width: 100%;
 }
 
-.name-group label,
+.name-group label {
+    white-space: nowrap; /* Prevent labels from wrapping */
+}
+
 .name-group input {
-    width: 50%; /* Makes both fields take equal space */
+    flex: 1; /* Make input fields take equal space */
+    min-width: 100px; /* Prevent the boxes from getting too small */
 }
 
 .input-field {
