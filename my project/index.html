@@ -76,21 +76,23 @@
         <input type="email" id="email" class="input-field" placeholder="Email Address">
 
         <div class="method-group">
-            <h4 class="payment-method-title">Payment Method:</h4>
-            <input type="radio" id="cash" name="payment-method" class="radio-btn" value="cash" required>
-            <label for="cash">Cash</label><br>
+            <div class="payment-method">
+                <h4 class="payment-method-title">Payment Method:</h4>
+                <input type="radio" id="cash" name="payment-method" class="radio-btn" value="cash" required>
+                <label for="cash">Cash</label><br>
 
-            <input type="radio" id="gcash" name="payment-method" class="radio-btn" value="gcash">
-            <label for="gcash">GCash</label><br>
-        </div>
+                <input type="radio" id="gcash" name="payment-method" class="radio-btn" value="gcash">
+                <label for="gcash">GCash</label><br>
+            </div>
 
-        <div class="order-method">
-            <h4 class="order-method-title">Order Method:</h4>
-            <input type="radio" id="pickup" name="order-method" class="radio-btn" value="pickup" required>
-            <label for="pickup">Pick-up</label><br>
+            <div class="order-method">
+                <h4 class="order-method-title">Order Method:</h4>
+                <input type="radio" id="pickup" name="order-method" class="radio-btn" value="pickup" required>
+                <label for="pickup">Pick-up</label><br>
 
-            <input type="radio" id="delivery" name="order-method" class="radio-btn" value="delivery">
-            <label for="delivery">Delivery</label><br>
+                <input type="radio" id="delivery" name="order-method" class="radio-btn" value="delivery">
+                <label for="delivery">Delivery</label><br>
+            </div>
         </div>
 
         <button type="submit" class="submit-button">Place Order</button>
