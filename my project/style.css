@@ -52,7 +52,6 @@ body {
 
 .order-summary-section {
     width: 30%;
-    height: 560px;
     background: #f1b60f;
     padding: 10px;
     padding-top: 5px;
@@ -60,12 +59,39 @@ body {
     position: fixed;
     right: .5px;
     top: 45px;
+    max-height: 560px;
+    overflow-y: auto;
+}
+
+/* Custom Scrollbar Styling */
+.order-summary-section::-webkit-scrollbar {
+    width: 8px;
+}
+
+.order-summary-section::-webkit-scrollbar-track {
+    background: #f1b60f;
+    border-radius: 10px;
+}
+
+.order-summary-section::-webkit-scrollbar-thumb {
+    background: black;
+    border-radius: 10px;
+    transition: background 0.3s ease-in-out;
+}
+
+.order-summary-section::-webkit-scrollbar-thumb:hover {
+    background: black;
+}
+
+.order-summary-section {
+    scrollbar-width: thin;
+    scrollbar-color: black #f1b60f;
 }
 
 /* Menu Items */
-.section-title{
-    padding-top:5rem;
-    font-size:30px;
+.section-title {
+    padding-top: 5rem;
+    font-size: 30px;
 }
 
 .menu-item {
@@ -221,3 +247,4 @@ body {
 .submit-button:active {
     transform: scale(0.95);
 }
+
