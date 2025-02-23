@@ -6,13 +6,16 @@ body {
 .menu-item {
     border: 1px solid #ddd;
     padding: 10px;
-    margin: 10px;
+    margin: 8px;
+    grid-auto-rows: repeat (3,1fr);
     display: inline-block;
+    width: 200px;
+    height: 300px;
 }
 
 .menu-item img {
-    max-width: 100px;
-    height: auto;
+    max-width: auto;
+    height: 80px;
 }
 
 .header {
