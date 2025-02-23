@@ -44,7 +44,7 @@ export async function fetchMenu() {
                     <h4>${item.menu_name}</h4>
                     <p>${item.menu_description}</p>
                     <p><strong>₱${item.menu_price}</strong></p>
-                    <button type="submit" class="submit-button" data-id="${item.menu_id}" data-name="${item.menu_name}" data-price="${item.menu_price}">Submit</button>
+                    <button type="button" class="submit-button add-to-cart" data-id="${item.menu_id}" data-name="${item.menu_name}" data-price="${item.menu_price}">Submit</button>
                 `;
                 categorySection.appendChild(menuItem);
             });
@@ -53,9 +53,8 @@ export async function fetchMenu() {
         }
 
         // Add event listeners to Submit buttons
-        document.querySelectorAll(".submit-button").forEach(button => {
+        document.querySelectorAll(".add-to-cart").forEach(button => {
             button.addEventListener("click", (event) => {
-                event.preventDefault(); // Prevent default form behavior
                 const id = event.target.dataset.id;
                 const name = event.target.dataset.name;
                 const price = parseFloat(event.target.dataset.price);
