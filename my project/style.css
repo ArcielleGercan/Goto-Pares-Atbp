@@ -89,11 +89,6 @@ body {
 }
 
 /* Menu Items */
-.menu-container{
-    
-    padding-bottom: 8rem;
-}
-
 .section-title {
     padding-top: 5rem;
     font-size: 30px;
@@ -256,7 +251,7 @@ body {
 
 /*Footer */
 .footer {
-    background-color: black;
+    background-color: #1a1a1a;
     color: white;
     text-align: center;
     padding: 20px 0;
