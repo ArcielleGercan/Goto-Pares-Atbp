@@ -61,7 +61,7 @@ body {
     right: .5px;
     top: 45px;
     max-height: 650px;
-    overflow-y: auto;
+    overflow-y: fixed;
 }
 
 /* Custom Scrollbar Styling */
