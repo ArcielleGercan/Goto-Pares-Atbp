@@ -48,6 +48,7 @@ body {
 
 .menu-section {
     width: 68%;
+    padding-bottom:2rem;
 }
 
 .order-summary-section {
@@ -59,7 +60,7 @@ body {
     position: fixed;
     right: .5px;
     top: 45px;
-    max-height: 560px;
+    max-height: 650px;
     overflow-y: auto;
 }
 
@@ -256,6 +257,9 @@ body {
     padding: 10px 20px;
     text-align: center;
     font-size: 14px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    margin-top: 7rem;
 }
 
 .footer-content {
@@ -276,7 +280,7 @@ body {
 }
 
 .facebook-icon {
-    width: 16px;
+    width: auto;
     height: 16px;
 }
 
