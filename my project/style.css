@@ -289,6 +289,18 @@ h2 {
     height: 24px;
 }
 
+.contact-icon{
+    width: 24px;
+    height: 24px;
+    border-radius:20px;
+}
+
+.adress-icon{
+    width: 24px;
+    height: 24px;
+    background:white;
+    border-radius: 20px
+}
 .contact {
     margin-top: 20px;
 }
