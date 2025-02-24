@@ -256,7 +256,7 @@ body {
 
 /*Footer */
 .footer {
-    background-color: black;
+    background-color: #1a1a1a;
     color: white;
     text-align: center;
     padding: 20px 0;
@@ -289,9 +289,11 @@ h2 {
     background-color: #135db6;
 }
 
-.facebook-icon {
-    width: 24px;
-    height: 24px;
+.icon {
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+    margin-right: 8px;
 }
 
 .contact {
@@ -299,5 +301,9 @@ h2 {
 }
 
 .contact p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
     margin: 5px 0;
 }
