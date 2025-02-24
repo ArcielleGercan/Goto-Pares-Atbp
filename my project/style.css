@@ -251,60 +251,37 @@ body {
 
 /*Footer */
 .footer {
-    background-color: #1a1a1a;
+    background-color: #222;
     color: white;
+    padding: 10px 20px;
     text-align: center;
-    padding: 20px 0;
+    font-size: 14px;
 }
 
-.container {
-    max-width: 600px;
-    margin: auto;
-}
-
-h2 {
-    font-size: 1.5em;
+.footer-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    padding-bottom: 5px;
 }
 
 .facebook-btn {
-    display: inline-flex;
+    display: flex;
     align-items: center;
-    gap: 8px;
-    background-color: #1877F2;
     color: white;
     text-decoration: none;
-    padding: 10px 15px;
-    border-radius: 5px;
-    font-weight: bold;
-    margin-top: 10px;
-    transition: background 0.3s;
-}
-
-.facebook-btn:hover {
-    background-color: #135db6;
+    gap: 5px;
 }
 
 .facebook-icon {
-    width: 24px;
-    height: 24px;
+    width: 16px;
+    height: 16px;
 }
 
-.contact-icon{
-    width: 24px;
-    height: 24px;
-    border-radius:20px;
-}
-
-.adress-icon{
-    width: 24px;
-    height: 24px;
-    background:white;
-    border-radius: 20px
-}
-.contact {
-    margin-top: 20px;
-}
-
-.contact p {
-    margin: 5px 0;
+.footer-bottom {
+    text-align: center;
+    margin-top: 5px;
+    font-size: 12px;
 }
