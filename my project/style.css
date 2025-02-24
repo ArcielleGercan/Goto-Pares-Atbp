@@ -254,38 +254,51 @@ body {
 .footer {
     background-color: #222;
     color: white;
-    padding: 10px 20px;
+    padding: 15px 20px;
     text-align: center;
     font-size: 14px;
-    border-top-right-radius: 10px;
-    border-bottom-right-radius: 10px;
-    margin-top: 7rem;
 }
 
-.footer-content {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    flex-wrap: wrap;
-    padding-bottom: 5px;
+.footer-title {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.fb {
+    margin-bottom: 5px;
 }
 
 .facebook-btn {
     display: flex;
     align-items: center;
+    justify-content: center;
     color: white;
     text-decoration: none;
-    gap: 5px;
+    font-size: 14px;
 }
 
 .facebook-icon {
-    width: auto;
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+}
+
+.contact-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    font-size: 14px;
+    flex-wrap: wrap;
+}
+
+.contact-icon, .address-icon {
+    width: 16px;
     height: 16px;
+    margin-right: 5px;
 }
 
 .footer-bottom {
-    text-align: center;
-    margin-top: 5px;
+    margin-top: 10px;
     font-size: 12px;
 }
