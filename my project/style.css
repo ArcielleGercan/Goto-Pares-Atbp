@@ -258,50 +258,48 @@ body {
     text-align: center;
     font-size: 14px;
     margin-top: 7rem;
+    border-top-left-radius: 10px;
     border-top-right-radius: 10px;
-    border-bottom-right-radius: 10px;
 }
 
-.footer-title {
-    font-size: 18px;
-    margin-bottom: 5px;
-}
-
-.fb {
-    margin-bottom: 5px;
+.footer-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    font-size: 14px;
 }
 
 .facebook-btn {
     display: flex;
     align-items: center;
-    justify-content: center;
     color: white;
     text-decoration: none;
     font-size: 14px;
+    gap: 5px;
 }
 
-.facebook-icon {
-    width: auto;
+.facebook-icon, .contact-icon, .address-icon {
     height: 20px;
+    width: 20px;
     margin-right: 5px;
 }
 
-.contact-info {
+.contact-info, .address-info {
     display: flex;
-    justify-content: center;
     align-items: center;
-    gap: 15px;
-    font-size: 14px;
-    flex-wrap: wrap;
+    gap: 5px;
 }
 
-.contact-icon, .address-icon {
-    width: auto;
-    height: 20px;
-    margin-right: 5px;
+.separator {
+    color: white;
+    font-weight: bold;
 }
 
 .footer-bottom {
     margin-top: 10px;
     font-size: 12px;
+    text-align: center;
 }
+
