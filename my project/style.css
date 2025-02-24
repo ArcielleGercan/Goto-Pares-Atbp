@@ -282,8 +282,10 @@ body {
 
 .facebook-icon, .contact-icon, .address-icon {
     height: 20px;
-    width: 20px;
+    width: autopx;
+    border-radius:30px;
     margin-right: 5px;
+    background:white;
 }
 
 .contact-info, .address-info {
