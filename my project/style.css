@@ -257,6 +257,9 @@ body {
     padding: 15px 20px;
     text-align: center;
     font-size: 14px;
+    margin-top: 7rem;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
 }
 
 .footer-title {
@@ -278,7 +281,7 @@ body {
 }
 
 .facebook-icon {
-    width: 20px;
+    width: auto;
     height: 20px;
     margin-right: 5px;
 }
@@ -293,8 +296,8 @@ body {
 }
 
 .contact-icon, .address-icon {
-    width: 16px;
-    height: 16px;
+    width: auto;
+    height: 20px;
     margin-right: 5px;
 }
 
