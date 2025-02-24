@@ -126,6 +126,7 @@ body {
     border-bottom: 2px solid #d3512b;
     padding-bottom: 5px;
     text-align: left;
+    padding-left: 15px;
 }
 
 /* Order Summary */
@@ -248,3 +249,4 @@ body {
     transform: scale(0.95);
 }
 
+/*Footer */
